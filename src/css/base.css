@@ -1,24 +1,25 @@
 @font-face {
   font-family: Swiss;
-  src: url(/src/assets/fonts/Swiss/regular/Swiss-721-Regular.woff2) format('woff2'), url(/src/assets/fonts/Swiss/regular/Swiss-721-Regular.woff) format('woff');
+  src: url(/assets/fonts/Swiss/regular/Swiss-721-Regular.woff2) format('woff2'), url(/src/assets/fonts/Swiss/regular/Swiss-721-Regular.woff) format('woff');
   font-weight: 300;
 }
 
 @font-face {
   font-family: Swiss;
-  src: url(/src/assets/fonts/Swiss/bold/Swiss-721-Bold.woff2) format('woff2'), url(/src/assets/fonts/Swiss/bold/Swiss-721-Bold.woff) format('woff');
+  src: url(/assets/fonts/Swiss/bold/Swiss-721-Bold.woff2) format('woff2'), url(/assets/fonts/Swiss/bold/Swiss-721-Bold.woff) format('woff');
   font-weight: 600;
 }
 
 @font-face {
   font-family: Swiss;
-  src: url(/src/assets/fonts/Swiss/black/Swiss-721-Black.woff2) format('woff2'), url(/src/assets/fonts/Swiss/black/Swiss-721-Black.woff) format('woff');
+  src: url(/assets/fonts/Swiss/black/Swiss-721-Black.woff2) format('woff2'), url(/assets/fonts/Swiss/black/Swiss-721-Black.woff) format('woff');
   font-weight: 900;
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* stylelint-disable */
@@ -42,16 +43,6 @@ a {
 }
 
 /* header */
-
-.header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  min-width: 1024px;
-  z-index: 10;
-}
 
 /* menu 1 */
 
@@ -115,9 +106,6 @@ a {
 /* menu two */
 
 .menu-two {
-  display: block;
-  position: relative;
-  z-index: 20;
   background-color: var(--primary-background);
 }
 
@@ -158,5 +146,45 @@ a {
 }
 
 .item-cart {
-  margin: 0 1.3rem;
+  margin-left: 1.3rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo-image {
+  transition: all .2s ease-in-out;
+}
+
+.logo-fixed {
+  transform: scale(.7, .7);
+}
+
+/* footer */
+
+.footer {
+  background-color: black;
+  height: 8.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer__text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.footer__wrapper {
+  margin: 0 auto;
+  width: 101.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-image {
+  margin-left: 1.8rem;
 }
