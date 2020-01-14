@@ -8,7 +8,10 @@
     <?php echo $css;?>
   </head>
   <body>
-
+  <ul>
+    <li>dsq</li>
+    <li>dfsq</li>
+  </ul>
     <?php echo $content;?>
     <?php echo $js; ?>
   </body>
