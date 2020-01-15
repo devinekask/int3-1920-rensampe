@@ -16,7 +16,7 @@
             <li class="menu__item"><a href="" class="menu__link">tv-gids</a></li>
             <li class="menu__item"><a href="" class="menu__link">zoekertjes</a></li>
             <li class="menu__item"><a href="" class="menu__link">abonnement nemen</a></li>
-            <li class="menu__item"><a href="" class="menu__link menu__link-selected">webshop</a></li>
+            <li class="menu__item"><a href="index.php" class="menu__link menu__link-selected">webshop</a></li>
           </div>
           <div class="menu__items menu__items-second">
             <li class="menu__item"><a href="" class="menu__link menu__link-nuinhumo">nu in humo</a></li>
@@ -33,8 +33,8 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">humor</a></li>
             <div class="logo">
               <a class="logo-link" href="">
-                <img class="logo-image" id="logo-svg" src="assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
                 <h1 class="hidden">Humo</h1>
+                <img class="logo-image" id="logo-svg" src="assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
               </a>
             </div>
             <li class="menu-two__item"><a href="" class="menu-two__link">tv/film</a></li>
@@ -50,7 +50,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main">
     <?php echo $content;?>
     </main>
     <footer class="footer">

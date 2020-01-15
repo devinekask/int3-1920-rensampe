@@ -11,9 +11,9 @@
 }
 
 @font-face {
-  font-family: Swiss;
+  font-family: SwissBl;
   src: url(/assets/fonts/Swiss/black/Swiss-721-Black.woff2) format('woff2'), url(/assets/fonts/Swiss/black/Swiss-721-Black.woff) format('woff');
-  font-weight: 900;
+  font-weight: 600;
 }
 
 html {
@@ -42,7 +42,35 @@ a {
   color: black;
 }
 
+.hidden {
+  display: none;
+}
+
+.button {
+  background-color: var(--primary-red);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 25rem;
+  height: 5.6rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button-link {
+  color: var(--primary-red);
+  background-color: white;
+  padding: 1.8rem 9rem;
+  border: .3rem solid var(--primary-red);
+}
+
 /* header */
+
+.header {
+  margin-bottom: 3rem;
+}
 
 /* menu 1 */
 
@@ -106,6 +134,7 @@ a {
 /* menu two */
 
 .menu-two {
+  z-index: 2;
   background-color: var(--primary-background);
 }
 
@@ -187,4 +216,15 @@ a {
 
 .social-image {
   margin-left: 1.8rem;
+}
+
+main {
+  z-index: 1;
+  margin: 0 auto;
+  width: 101.6rem;
+  min-height: 100vh;
+}
+
+.main-fixed {
+  margin-top: 10rem;
 }

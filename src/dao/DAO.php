@@ -12,7 +12,7 @@ class DAO {
     if(empty(self::$sharedPDO)) {
 
       $dbHost = getenv('PHP_DB_HOST') ?: "localhost";
-      $dbName = getenv('PHP_DB_DATABASE') ?: "webshop";
+      $dbName = getenv('PHP_DB_DATABASE') ?: "humo";
       $dbUser = getenv('PHP_DB_USERNAME') ?: "humo";
       $dbPass = getenv('PHP_DB_PASSWORD') ?: "humo123";
 
