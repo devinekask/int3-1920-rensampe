@@ -19,7 +19,11 @@ $routes = array(
   'detail' => array(
     'controller' => 'Webshops',
     'action' => 'detail'
-  )
+  ),
+  'cart' => array(
+    'controller' => 'Orders',
+    'action' => 'cart'
+)
 );
 
 if(empty($_GET['page'])) {

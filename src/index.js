@@ -1,7 +1,6 @@
 require('./style.css');
 
 {
-
   window.onscroll = function () { logoScale(), headerScroll(); };
 
   // menu scroll
@@ -33,5 +32,8 @@ require('./style.css');
       logo.classList.remove('logo-fixed');
     }
   }
+
+  // filter
+
 
 }

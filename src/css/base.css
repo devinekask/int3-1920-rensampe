@@ -64,6 +64,15 @@ a {
   text-align: center;
 }
 
+.button-small {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
 .button-link {
   color: var(--primary-red);
   background-color: white;
@@ -237,4 +246,8 @@ main {
 
 .main-fixed {
   margin-top: 10rem;
+}
+
+.has-js .form-submit {
+  display: none;
 }

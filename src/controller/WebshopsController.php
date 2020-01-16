@@ -12,18 +12,29 @@ class WebshopsController extends Controller {
   }
 
   public function index() {
-
     $products = $this->webshopDAO->selectAll();
-
 
     if(!empty($_GET['term'])) {
       $webshopDAO = new WebshopDAO();
       $products = $webshopDAO->selectProductByTitle($_GET['term']);
     }
 
+    if(!empty($_GET['filter'])) {
+      $products = $this->webshopDAO->selectProductByType($_GET['filter']);
+    }
+
+    if(!empty($_GET['filter']) && $_GET['filter'] === 'all') {
+      $products = $this->webshopDAO->selectAll();
+    }
+
+
+
     if(empty($products)){
       $products = array();
     }
+
+
+
 
     $this->set('products', $products);
     $this->set('title', "Webshop");

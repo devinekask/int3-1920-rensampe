@@ -5,7 +5,7 @@
 .webshop {
   display: grid;
   grid-template-columns: 18.8rem 82.8rem;
-  grid-template-rows: auto 2rem auto;
+  grid-template-rows: 3.2rem 2rem auto;
 }
 
 .title {
@@ -13,6 +13,7 @@
   grid-column: 2;
   font-size: 3.2rem;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .search {
@@ -48,6 +49,21 @@
 .filter {
   width: 18.8rem;
   grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__item {
+  border: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+  & input {
+    margin-right: 1.5rem;
+    border: .1rem solid black;
+  }
 }
 
 .filter__link {
@@ -61,6 +77,11 @@
 
 .filter-fixed {
   margin-top: 10rem;
+}
+
+.button-filter {
+  width: 15rem;
+  margin-top: 1rem;
 }
 
 .products {
