@@ -42,7 +42,7 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">boeken</a></li>
           </div>
           <li class="menu-two__item-cart">
-            <p class="item-cart">0</p>
+            <p class="item-cart"><?php echo $numItems;?></p>
             <a href="index.php?page=cart" class="menu-two__link">
               <img src="assets/img/cart.svg" alt="Winkelwagen" width="27px" height="21px">
             </a>

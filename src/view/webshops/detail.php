@@ -10,9 +10,9 @@
       <p class="boek__info-description__part"><?php echo $product['desc_3'];?></p>
     </div>
     <div class="boek__info-buttons">
-      <form action="index.php?page=">
-        <input type="hidden">
-        <button class="button" type="submit" action="name">bestel</button>
+      <form method="post" action="index.php?page=cart">
+        <input name="product_id" type="hidden" value="<?php echo $product['id'];?>">
+        <button class="button" type="submit" name="action" value="add">bestel</button>
       </form>
       <?php
         if(!empty($product['other_link'])) {
