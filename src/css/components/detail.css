@@ -1,9 +1,11 @@
 .boek {
   display: flex;
+  margin-bottom: 10rem;
 }
 
 .boek__info {
   margin-left: 3.9rem;
+  height: 8.8rem;
 }
 
 .boek__info-title {

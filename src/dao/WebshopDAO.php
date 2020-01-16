@@ -28,4 +28,12 @@ class WebshopDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  public function selectProductByTitle($title){
+    $sql = "SELECT * FROM `products` WHERE `title` LIKE :title ORDER BY `title` LIMIT 100";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':title', '%' . $title . '%');
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
 }

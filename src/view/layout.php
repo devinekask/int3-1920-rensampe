@@ -62,8 +62,8 @@
           <a href="" class="social"><img src="assets/img/facebook.svg" alt="Humo Facebook" class="social-image" width="8px" height="16px"></a>
           <a href="" class="social"><img src="assets/img/instagram.svg" alt="Humo Instagram" class="social-image" width="16px" height="16px"></a>
         </div>
-      </div>
     </footer>
+    </div>
     <?php echo $js; ?>
   </body>
 </html>

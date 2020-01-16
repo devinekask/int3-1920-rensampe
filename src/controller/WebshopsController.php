@@ -15,6 +15,16 @@ class WebshopsController extends Controller {
 
     $products = $this->webshopDAO->selectAll();
 
+
+    if(!empty($_GET['term'])) {
+      $webshopDAO = new WebshopDAO();
+      $products = $webshopDAO->selectProductByTitle($_GET['term']);
+    }
+
+    if(empty($products)){
+      $products = array();
+    }
+
     $this->set('products', $products);
     $this->set('title', "Webshop");
   }
