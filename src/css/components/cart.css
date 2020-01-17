@@ -93,6 +93,7 @@
   grid-column: 5;
   justify-self: flex-end;
   align-self: flex-end;
+  font-weight: 600;
 }
 
 .total {
@@ -123,7 +124,7 @@
 .code__input {
   margin-top: 2rem;
   height: 3.2rem;
-  width: 29.8rem;
+  width: 28.9rem;
   border: .1rem black solid;
   font-size: 1.4rem;
   padding-left: 1rem;
@@ -134,7 +135,7 @@
   background-color: var(--primary-background);
   color: var(--primary-red);
   border: .3rem solid var(--primary-red);
-  width: 29.8rem;
+  width: 28.9rem;
   margin-top: 1.5rem;
 }
 
@@ -163,7 +164,7 @@
 }
 
 .cart-button {
-  width: 29.8rem;
+  width: 28.9rem;
 }
 
 .button-update {

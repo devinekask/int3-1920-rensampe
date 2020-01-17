@@ -31,6 +31,10 @@ $routes = array(
   'payment' => array(
     'controller' => 'Orders',
     'action' => 'payment'
+  ),
+  'confirmation' => array(
+    'controller' => 'Orders',
+    'action' => 'confirmation'
   )
 );
 

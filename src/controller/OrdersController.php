@@ -89,5 +89,10 @@ class OrdersController extends Controller {
 
       $this->set('title', "Betaalwijze");
     }
+
+    public function confirmation() {
+
+      $this->set('title', "Bevestiging");
+    }
 }
 

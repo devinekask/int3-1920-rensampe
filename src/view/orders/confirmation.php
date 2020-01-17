@@ -2,10 +2,10 @@
   <ul class="steps">
     <li class="step"><a class="step__link" href="index.php?page=cart">winkelwagen</a></li>
     <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
-    <li class="step"><a class="step__link step__link-selected" href="index.php?page=information">jouw gegevens</a></li>
+    <li class="step"><a class="step__link" href="index.php?page=cart">jouw gegevens</a></li>
     <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
-    <li class="step"><a class="step__link" href="index.php?page=information">betaalwijze</a></li>
+    <li class="step"><a class="step__link" href="index.php?page=cart">betaalwijze</a></li>
     <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
-    <li class="step"><a class="step__link" href="index.php?page=information">bevestiging</a></li>
+    <li class="step"><a class="step__link step__link-selected" href="index.php?page=confirmation">bevestiging</a></li>
   </ul>
 </section>

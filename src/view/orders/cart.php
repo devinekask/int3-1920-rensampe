@@ -1,12 +1,12 @@
 <section class="process">
   <ul class="steps">
-    <li class="step"><a class="step__link step__link-selected" href="">winkelwagen</a></li>
+    <li class="step"><a class="step__link step__link-selected" href="index.php?page=cart">winkelwagen</a></li>
     <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
-    <li class="step"><a class="step__link" href="">jouw gegevens</a></li>
+    <li class="step"><a class="step__link" href="index.php?page=cart">jouw gegevens</a></li>
     <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
-    <li class="step"><a class="step__link" href="">betaalwijze</a></li>
+    <li class="step"><a class="step__link" href="index.php?page=cart">betaalwijze</a></li>
     <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
-    <li class="step"><a class="step__link" href="">bevestiging</a></li>
+    <li class="step"><a class="step__link" href="index.php?page=cart">bevestiging</a></li>
   </ul>
 </section>
 
@@ -18,12 +18,8 @@
           <?php
           $total = 0;
           foreach($_SESSION['cart'] as $item) {
-            if (is_numeric($item['quantity']) && is_numeric($item['product']['price'])) {
-              //$itemTotal += ($item['quantity'] * $item['product']['price']);
-            } else {
-              // do some error handling...
-            }
-            //$total += $itemTotal;
+            $itemTotal = $item['product']['price'] * $item['quantity'];
+            $total += $itemTotal;
           ?>
           <ul class="item">
             <li class='product-image'>
@@ -34,11 +30,11 @@
             <li class='product-description'>
               <p class="product-description__title"><?php echo $item['product']['title'];?></p>
               <span class="product-description__subtitle"><?php echo $item['product']['type'] . ' - ' . $item['product']['subtitle'];?></span>
-              <p class='product-description__price'>22EUR<?php //echo money_format("%i", $item['product']['price']);?></p>
+              <p class='product-description__price'><?php echo money_format("%i", $item['product']['price']);?></p>
             </li>
             <li class='product-quantity'><input class="text product-quantity__quantity" type="number" name="quantity[<?php echo $item['product']['id'];?>]" value="<?php echo $item['quantity'];?>" class="replace" /> </li>
             <li class='remove-item'><button type="submit" class="remove-from-cart" name="remove" value="<?php echo $item['product']['id'];?>"><img src="assets/img/remove.svg" alt="Remove" width="14px" height="14px"></button></li>
-            <li class='product-total'>22EUR<?php //echo money_format("%i", $itemTotal);?></li>
+            <li class='product-total'><?php echo money_format("%i", $itemTotal);?></li>
           </ul>
           <?php
           }
