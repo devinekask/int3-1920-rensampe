@@ -7,6 +7,7 @@ class Controller {
   protected $env = 'development';
 
   public function filter() {
+    setlocale(LC_ALL, 'nl_BE');
     if (basename(dirname(dirname(__FILE__))) != 'src') {
       $this->env = 'production';
     }

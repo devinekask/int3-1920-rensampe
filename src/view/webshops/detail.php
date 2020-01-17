@@ -1,7 +1,7 @@
 <section class="boek">
   <img class="boek__cover" src="<?php echo 'assets/img/' . $product['type'] . '/' . $product['type'] . $product['id'] . '.jpg'; ?>" alt="<?php echo $product['title'];?>" width="469" height="563">
   <div class="boek__info">
-    <p class="boek__info-price"><?php echo $product['price'];?></p>
+    <p class="boek__info-price"><?php echo money_format("%i", $product['price']);?></p>
     <h2 class="title boek__info-title"><?php echo $product['title'];?></h2>
     <p class="boek__info-subtitle"><?php echo $product['type'];?> - <?php echo $product['subtitle'];?></p>
     <div class="boek__info-description">

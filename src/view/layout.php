@@ -9,6 +9,7 @@
   </head>
   <body>
     <header class="header">
+      <h1 class="hidden">Humo</h1>
       <nav class="menu">
         <ul class="menu__wrapper">
           <div class="menu__items">
@@ -33,7 +34,6 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">humor</a></li>
             <div class="logo">
               <a class="logo-link" href="">
-                <h1 class="hidden">Humo</h1>
                 <img class="logo-image" id="logo-svg" src="assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
               </a>
             </div>
