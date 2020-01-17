@@ -171,3 +171,18 @@
   width: 15rem;
   height: 3.2rem;
 }
+
+.cart__empty {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart__empty-image {
+  margin-bottom: 2rem;
+}
+
+.cart__empty-text {
+  margin-bottom: 2rem;
+}
