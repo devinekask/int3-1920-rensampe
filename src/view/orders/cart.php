@@ -10,8 +10,9 @@
   </ul>
 </section>
 
-<div class="cart__wrapper">
+<div class="cart-code-total__wrapper">
   <section class="cart">
+    <div class="cart__wrapper"></div>
     <h2 class="cart__title">winkelwagen</h2>
     <form action="index.php?page=cart" method="post" id="cartform">
           <?php
@@ -43,16 +44,42 @@
           }
           ?>
         <div class='total'>
-          <p class='order-total'><?php echo money_format("%i", $total);?></p>
-          <p><button type="submit" id="update-cart" class="btn" name="action" value="update">Update Cart</button></p>
+          <p><button type="submit" id="update-cart" class="button-small button-update" name="action" value="update">Update Cart</button></p>
         </div>
-        <p><button class="btn-reversed btn" type="submit" id="checkout" name="action" value="checkout">Checkout</button></p>
     </form>
   </section>
 
   <section class="code">
     <h2 class="cart__title">Kortingscode</h2>
-    <input class="code__input" type="text">
-    <button type="submit">toevoegen</button>
+    <form action="">
+      <input class="code__input" type="text">
+      <button class="button code__button" type="submit">toevoegen</button>
+    </form>
   </section>
+
+  <section class="cart-total">
+    <h2 class="cart__title">Totaalprijs</h2>
+    <ul class="cart-total__items">
+      <li class="cart-total__item">
+        <p class="cart-total__text">Subtotaal</p>
+        <p class='cart-total__text order-total'><?php echo money_format("%i", $total);?></p>
+      </li>
+      <li class="cart-total__item">
+        <p class="cart-total__text">Kortingscode</p>
+        <p class="cart-total__text">- 0EUR</p>
+      </li>
+      <li class="cart-total__item">
+        <p class="cart-total__text">Levering</p>
+        <p class="cart-total__text">Gratis</p>
+      </li>
+      <li class="cart-total__item cart-total__item-price">
+        <p class="cart-total__text">Totaal</p>
+        <p class="cart-total__text">234EUR</p>
+      </li>
+    </ul>
+    <form action="index.php?page=information" method="post" id="cartform">
+      <p><button class="btn-reversed button cart-button" type="submit" id="checkout" name="action" value="checkout">Jouw gegevens</button></p>
+    </form>
+  </section>
+
 </div>

@@ -79,4 +79,15 @@ class OrdersController extends Controller {
         }
       }
     }
-  }
+
+    public function information() {
+
+      $this->set('title', "Jouw gegevens");
+    }
+
+    public function payment() {
+
+      $this->set('title', "Betaalwijze");
+    }
+}
+
