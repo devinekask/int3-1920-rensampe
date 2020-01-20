@@ -15,20 +15,24 @@
   <section class="cart-total cart-total__information">
     <h2 class="cart__title">Totaalprijs</h2>
     <?php
-      $total = 0;
+      $subtotal = 0;
       foreach($_SESSION['cart'] as $item) {
         $itemTotal = $item['product']['price'] * $item['quantity'];
-        $total += $itemTotal;
+        $subtotal += $itemTotal;
       }
+    ?>
+    <?php
+      $discount = 0;
+      $total = $subtotal - $discount;
     ?>
     <ul class="cart-total__items">
       <li class="cart-total__item">
         <p class="cart-total__text">Subtotaal</p>
-        <p class="cart-total__text"><?php echo money_format('€ %!n', $total); ?></p>
+        <p class="cart-total__text"><?php echo money_format('€ %!n', $subtotal); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Kortingscode</p>
-        <p class="cart-total__text">- 0EUR</p>
+        <p class="cart-total__text">- <?php echo money_format('€ %!n', $discount); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Levering</p>

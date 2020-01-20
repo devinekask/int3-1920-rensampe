@@ -31,10 +31,12 @@
             </div>';
           }
 
-          $total = 0;
+          $subtotal = 0;
+          $discount = 0;
+
           foreach($_SESSION['cart'] as $item) {
             $itemTotal = $item['product']['price'] * $item['quantity'];
-            $total += $itemTotal;
+            $subtotal += $itemTotal;
           ?>
           <ul class="item">
             <li class='product-image'>
@@ -63,11 +65,12 @@
   <section class="code">
     <h2 class="cart__title">Kortingscode</h2>
     <?php
-      $discount = 0;
+
+      $total = $subtotal - $discount;
     ?>
-    <form action="">
-      <input class="code__input" type="text">
-      <button class="button code__button" type="submit">toevoegen</button>
+    <form method="post" action="index.php?page=cart" id="cartform">
+      <input class="code__input" type="text" name="code">
+      <button class="button code__button" type="submit" name="coupon">toevoegen</button>
     </form>
   </section>
 
@@ -76,7 +79,7 @@
     <ul class="cart-total__items">
       <li class="cart-total__item">
         <p class="cart-total__text">Subtotaal</p>
-        <p class='cart-total__text'><?php echo money_format('€ %!n', $total); ?></p>
+        <p class='cart-total__text'><?php echo money_format('€ %!n', $subtotal); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Kortingscode</p>
@@ -95,5 +98,4 @@
       <p><button class="button cart-button <?php if(empty($_SESSION['cart'])) { display:hidden; } ?>" type="submit" id="checkout" name="action" value="checkout">Jouw gegevens</button></p>
     </form>
   </section>
-
 </div>

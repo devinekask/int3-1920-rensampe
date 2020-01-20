@@ -34,6 +34,11 @@ class OrdersController extends Controller {
       exit();
     }
 
+    if(!empty($_POST['code'])) {
+      header('Location: index.php?page=cart&code=' . $_POST['code']);
+      exit();
+    }
+
     $this->set('title', "Winkelwagen");
   }
 
@@ -41,6 +46,7 @@ class OrdersController extends Controller {
     if(!empty($_SESSION['cart'])){
       unset($_SESSION['cart']);
     }
+
     header('Location: index.php?page=confirmation');
     exit();
   }

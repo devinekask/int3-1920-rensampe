@@ -15,20 +15,23 @@
   <section class="cart-total cart-total__information">
     <h2 class="cart__title">Totaalprijs</h2>
     <?php
-      $total = 0;
+      $subtotal = 0;
       foreach($_SESSION['cart'] as $item) {
-      $itemTotal = $item['product']['price'] * $item['quantity'];
-      $total += $itemTotal;
+        $itemTotal = $item['product']['price'] * $item['quantity'];
+        $subtotal += $itemTotal;
       }
+
+      $discount = 0;
+      $total = $subtotal - $discount;
     ?>
     <ul class="cart-total__items">
       <li class="cart-total__item">
         <p class="cart-total__text">Subtotaal</p>
-        <p class="cart-total__text"><?php echo money_format('€ %!n', $total); ?></p>
+        <p class="cart-total__text"><?php echo money_format('€ %!n', $subtotal); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Kortingscode</p>
-        <p class="cart-total__text">- 0EUR</p>
+        <p class="cart-total__text">- <?php echo money_format('€ %!n', $discount); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Levering</p>
@@ -74,7 +77,7 @@
             <p class="payment__item-title">Kredietkaart</p>
             <div class="payment__item-wrapper__name">
               <label class="input-name">Naam op kaart
-                <input class="code__input code__input-payment" type="text">
+                <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
               </label>
             </div>
             <div class="payment__item-wrapper__number">
@@ -85,12 +88,12 @@
             <div class="payment__item-wrapper__date payment__item-wrapper__date-cvc">
               <div>
                 <label class="input-name">Geldig tot
-                  <input class="code__input code__input-payment-tight" type="text">
+                  <input class="code__input code__input-payment-tight" type="text" value="02/20">
                 </label>
               </div>
               <div>
                 <label class="input-name">CVC / CVV
-                  <input class="code__input code__input-payment-tight" type="text">
+                  <input class="code__input code__input-payment-tight code__input-payment-cvc" type="text">
                 </label>
               </div>
             </div>
@@ -102,7 +105,7 @@
             <p class="payment__item-title">Debetkaart</p>
             <div class="payment__item-wrapper__name">
               <label class="input-name">Naam op kaart
-                <input class="code__input code__input-payment" type="text">
+                <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
               </label>
             </div>
             <div class="payment__item-wrapper__number">
@@ -112,7 +115,7 @@
             </div>
             <div class="payment__item-wrapper__date">
               <label class="input-name">Geldig tot
-                <input class="code__input code__input-payment-tight" type="text">
+                <input class="code__input code__input-payment-tight" type="text" value="02/20">
               </label>
             </div>
           </label>
