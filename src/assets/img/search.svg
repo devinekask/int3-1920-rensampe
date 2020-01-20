@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>icons/dark/magnifying-glass</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7,1 C3.14,1 0,4.14 0,8 C0,11.86 3.14,15 7,15 C8.18,15 9.34,14.72 10.32,14.18 C10.3984992,14.2744664 10.4855336,14.3615008 10.58,14.44 L12.58,16.44 C13.0831953,17.0062106 13.858695,17.2469829 14.5940852,17.0653204 C15.3294754,16.8836579 15.9036579,16.3094754 16.0853204,15.5740852 C16.2669829,14.838695 16.0262106,14.0631953 15.46,13.56 L13.46,11.56 C13.3625754,11.4625405 13.2553391,11.3754109 13.14,11.3 C13.68,10.32 14.02,9.18 14.02,7.98 C14.02,4.12 10.88,0.98 7.02,0.98 L7,1 Z M7,3 C9.78,3 12,5.22 12,8 C12,9.32 11.52,10.54 10.68,11.44 C10.66,11.46 10.64,11.48 10.62,11.5 C10.5255336,11.5784992 10.4384992,11.6655336 10.36,11.76 C9.48,12.56 8.28,13.02 6.98,13.02 C4.2,13.02 1.98,10.8 1.98,8.02 C1.98,5.24 4.2,3.02 6.98,3.02 L7,3 Z" id="path-1"></path>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="webshop_books" transform="translate(-1020.000000, -152.000000)">
+            <g id="nav/cart" transform="translate(400.000000, 140.000000)">
+                <g id="form/text/-with-icon" transform="translate(608.000000, 4.000000)">
+                    <g id="form/textfield/with-abel">
+                        <g id="Icon">
+                            <g id="icons/dark/magnifying-glass" transform="translate(12.000000, 7.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#212B36" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                <g id="Color" mask="url(#mask-2)" fill="#000000">
+                                    <g transform="translate(-1.000000, 0.000000)" id="color/main">
+                                        <rect x="0" y="0" width="18" height="18" rx="4"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

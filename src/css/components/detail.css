@@ -1,0 +1,41 @@
+.boek {
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+.boek__info {
+  margin-left: 3.9rem;
+  height: 8.8rem;
+}
+
+.boek__info-title {
+  font-family: SwissBl, Arial, Helvetica, sans-serif;
+  width: 50.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.boek__info-price {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.boek__info-subtitle {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.boek__info-description {
+  margin-bottom: 2rem;
+}
+
+.boek__info-description__part {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-bottom: .3rem;
+}
+
+.boek__info-buttons {
+  display: flex;
+  justify-content: space-between;
+}

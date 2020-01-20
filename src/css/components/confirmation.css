@@ -1,0 +1,21 @@
+.confirmation {
+  margin: 0 auto;
+  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmation__title {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.confirmation__text {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.confirmation__button {
+  margin-top: 1rem;
+}
