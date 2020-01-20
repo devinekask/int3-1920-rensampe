@@ -27,8 +27,6 @@ class WebshopsController extends Controller {
       $products = $this->webshopDAO->selectAll();
     }
 
-
-
     if(empty($products)){
       $products = array();
     }

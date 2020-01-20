@@ -43,4 +43,27 @@ class WebshopDAO extends DAO {
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  public function insertOrder($data){
+    $errors = $this->validate($data);
+    if(empty($errors)){
+      $sql = "INSERT INTO `orders` (`product_id`,`fname`,`lname`) VALUES(:product_id,:fname,:lname)";
+      $stmt = $this->pdo->prepare($sql);
+      $stmt->bindValue(':product_id',$data['product_id']);
+      $stmt->bindValue(':fname',$data['fname']);
+      $stmt->bindValue(':lname',$data['lname']);
+      return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+    return false;
+  }
+
+  // validate
+  public function validate($data){
+    $errors = [];
+    if (empty($data['fname'])) {
+      $errors['fname'] = 'The description is required';
+    }
+    return $errors;
+  }
 }

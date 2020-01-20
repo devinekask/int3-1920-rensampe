@@ -14,6 +14,9 @@ class Controller {
     if(!isset($_SESSION['cart'])) {
       $_SESSION['cart'] = array();
     }
+    if(!isset($_SESSION['information'])) {
+      $_SESSION['information'] = array();
+    }
     call_user_func(array($this, $this->route['action']));
   }
 

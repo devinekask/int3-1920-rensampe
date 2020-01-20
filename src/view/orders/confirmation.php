@@ -10,3 +10,10 @@
     <li class="step"><a class="step__link step__link-selected" href="index.php?page=confirmation">bevestiging</a></li>
   </ul>
 </section>
+
+<section class="confirmation">
+  <h2 class="confirmation__title cart__title">Bevestiging</h2>
+  <p class="confirmation__text">Er werd een bevestiging gestuurd via mail.</p>
+  <p class="confirmation__text">De bestelling wordt geleverd tussen de 3 à 5 dagen.</p>
+  <a href="index.php" class="confirmation__button button cart__empty-button">verder winkelen</a>
+</section>

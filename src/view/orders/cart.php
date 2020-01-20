@@ -26,9 +26,8 @@
           if(empty($_SESSION['cart'])) {
             echo '
             <div class="cart__empty">
-              <img class="cart__empty-image" src="" alt="Je winkelwagen is leeg." width="608" height="270">
               <span class="cart__empty-text" >Je winkelwagen is leeg.</span>
-              <button class="button">verder winkelen</button>
+              <a href="index.php" class="button cart__empty-button">verder winkelen</a>
             </div>';
           }
 
@@ -63,6 +62,9 @@
 
   <section class="code">
     <h2 class="cart__title">Kortingscode</h2>
+    <?php
+      $discount = 0;
+    ?>
     <form action="">
       <input class="code__input" type="text">
       <button class="button code__button" type="submit">toevoegen</button>
@@ -74,11 +76,11 @@
     <ul class="cart-total__items">
       <li class="cart-total__item">
         <p class="cart-total__text">Subtotaal</p>
-        <p class='cart-total__text order-total'><?php echo money_format('€ %!n', $total); ?></p>
+        <p class='cart-total__text'><?php echo money_format('€ %!n', $total); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Kortingscode</p>
-        <p class="cart-total__text">- 0EUR</p>
+        <p class="cart-total__text">- <?php echo money_format('€ %!n', $discount); ?></p>
       </li>
       <li class="cart-total__item">
         <p class="cart-total__text">Levering</p>
@@ -89,8 +91,8 @@
         <p class="cart-total__text"><?php echo money_format('€ %!n', $total); ?></p>
       </li>
     </ul>
-    <form action="index.php?page=information" method="post" id="cartform">
-      <p><button class="btn-reversed button cart-button <?php if(empty($_SESSION['cart'])) { display:hidden; } ?>" type="submit" id="checkout" name="action" value="checkout">Jouw gegevens</button></p>
+    <form action="index.php?page=information" method="post" id="cartform-button">
+      <p><button class="button cart-button <?php if(empty($_SESSION['cart'])) { display:hidden; } ?>" type="submit" id="checkout" name="action" value="checkout">Jouw gegevens</button></p>
     </form>
   </section>
 

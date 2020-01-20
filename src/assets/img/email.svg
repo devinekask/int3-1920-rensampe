@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>icons/dark/envelope-closed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,0.5 L0,2.5 L8,6.5 L16,2.5 L16,0.5 L0,0.5 Z M0,4.5 L0,12.5 L16,12.5 L16,4.5 L8,8.5 L0,4.5 Z" id="path-1"></path>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cart_payment" transform="translate(-796.000000, -524.000000)">
+            <g id="gegevens" transform="translate(776.000000, 424.000000)">
+                <g id="icons/dark/envelope-closed" transform="translate(20.000000, 100.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
