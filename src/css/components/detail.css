@@ -33,6 +33,11 @@
   font-size: 1.6rem;
   line-height: 2.8rem;
   margin-bottom: .3rem;
+
+  & li {
+    list-style-type: square;
+    list-style-position: inside;
+  }
 }
 
 .boek__info-buttons {
