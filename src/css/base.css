@@ -176,6 +176,7 @@ a {
   grid-column: 2;
   justify-self: flex-end;
   align-self: center;
+  list-style-type: none;
 }
 
 .menu-two__link {

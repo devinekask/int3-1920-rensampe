@@ -16,7 +16,7 @@
       </form>
       <?php
         if(!empty($product['other_link'])) {
-          echo '<a class="button button-link" href="' . $product['other_link'] . '">' . (($product['type'] === 'Boek') ? 'e-book' : 'boek') . '</a>';
+          echo '<a class="button button-link" href="' . $product['other_link'] . '">' . (($product['type'] === 'boek') ? 'e-book' : 'boek') . '</a>';
         }
       ?>
       </div>
