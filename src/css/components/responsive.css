@@ -861,6 +861,10 @@
     margin-bottom: 4rem;
   }
 
+  .subtitle {
+    margin-bottom: 3rem;
+  }
+
   .image {
     width: 100rem;
     height: 120rem;
