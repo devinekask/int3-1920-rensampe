@@ -76,6 +76,10 @@
     <?php } ?>
     </div>
     <?php //echo $js; ?>
+<<<<<<< HEAD
     <script src="./js/script.js"></script>
+=======
+    <script src="script.js"></script>
+>>>>>>> develop
   </body>
 </html>
