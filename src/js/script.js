@@ -1,4 +1,4 @@
-require('./style.css');
+require('style.css');
 
 {
   window.onscroll = function () { logoScale(), headerScroll(); };
