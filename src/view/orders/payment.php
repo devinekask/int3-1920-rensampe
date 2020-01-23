@@ -2,11 +2,11 @@
   <h2 class="hidden">Process</h2>
   <ul class="steps">
     <li class="step"><a class="step__link" href="index.php?page=cart">winkelwagen</a></li>
-    <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10px" height="11px">
     <li class="step"><a class="step__link" href="index.php?page=information">jouw gegevens</a></li>
-    <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10px" height="11px">
     <li class="step"><a class="step__link step__link-selected" href="index.php?page=payment">betaalwijze</a></li>
-    <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10px" height="11px">
     <li class="step"><a class="step__link" href="index.php?page=payment">bevestiging</a></li>
   </ul>
 </section>
@@ -63,18 +63,19 @@
 
   <section class="cart-information cart-payment">
       <h2 class="cart__title">Betaalwijze</h2>
-      <form class="payment" action="" method="post" id="handelCheckout">
+      <form class="payment information" action="" method="post" id="handelCheckout">
+        <p class="payment-bigerror error"></p>
         <div class="payment__item">
           <label class="payment__item-wrapper">
-            <input class="payment__item-radio" name="payment-radio" type="radio" required>
-            <p class="payment__item-title">PayPal</p>
+            <input class="input form-submit payment__item-radio" name="payment-radio" type="radio" required>
+            <p class="payment__item-title">PayPal<p class="payment-error error"></p></p>
             <p class="payment__item-text">Je wordt doorgestuurd naar PayPal om je betaling te voltooien.</p>
           </label>
         </div>
         <div class="payment__item">
           <label class="payment__item-wrapper">
-            <input class="payment__item-radio" name="payment-radio" type="radio">
-            <p class="payment__item-title">Kredietkaart</p>
+            <input class="input form-submit payment__item-radio" name="payment-radio" type="radio">
+            <p class="payment__item-title">Kredietkaart<p class="payment-error error"></p></p>
             <div class="payment__item-wrapper__name">
               <label class="input-name">Naam op kaart
                 <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
@@ -91,7 +92,7 @@
                   <input class="code__input code__input-payment-tight" type="text" value="02/20">
                 </label>
               </div>
-              <div>
+              <div class="cvc">
                 <label class="input-name">CVC / CVV
                   <input class="code__input code__input-payment-tight code__input-payment-cvc" type="text">
                 </label>
@@ -101,8 +102,8 @@
         </div>
         <div class="payment__item">
           <label class="payment__item-wrapper">
-            <input class="payment__item-radio" name="payment-radio" type="radio" required>
-            <p class="payment__item-title">Debetkaart</p>
+            <input class="input form-submit payment__item-radio" name="payment-radio" type="radio" required>
+            <p class="payment__item-title">Debetkaart<p class="payment-error error"></p></p>
             <div class="payment__item-wrapper__name">
               <label class="input-name">Naam op kaart
                 <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">

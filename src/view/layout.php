@@ -3,28 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Humo - <?php echo $title; ?></title>
     <?php echo $css;?>
   </head>
   <body>
+  <?php if($_GET['page'] != 'longread'){ ?>
     <header class="header">
       <h1 class="hidden">Humo</h1>
       <nav class="menu">
-        <ul class="menu__wrapper">
-          <div class="menu__items">
-            <li class="menu__item-video"><a href="" class="menu__link-video">video</a></li>
-            <li class="menu__item"><a href="" class="menu__link">tv-gids</a></li>
-            <li class="menu__item"><a href="" class="menu__link">zoekertjes</a></li>
-            <li class="menu__item"><a href="" class="menu__link">abonnement nemen</a></li>
-            <li class="menu__item"><a href="index.php" class="menu__link menu__link-selected">webshop</a></li>
-          </div>
-          <div class="menu__items menu__items-second">
-            <li class="menu__item"><a href="" class="menu__link menu__link-nuinhumo">nu in humo</a></li>
-            <li class="menu__item"><a href="" class="menu__link">login</a></li>
-            <li class="menu__item"><a href="" class="menu__link">registreer</a></li>
-          </div>
-        </ul>
+        <div id="menuToggle">
+        <input class="hamburger sticky" type="checkbox"/>
+        <span></span>
+        <span class="hamburger__two"></span>
+        <span class="hamburger__three"></span>
+          <ul class="menu__wrapper">
+            <div class="menu__items">
+              <li class="menu__item-video"><a href="" class="menu__link menu__link-video">video</a></li>
+              <li class="menu__item"><a href="" class="menu__link">tv-gids</a></li>
+              <li class="menu__item"><a href="" class="menu__link">zoekertjes</a></li>
+              <li class="menu__item"><a href="" class="menu__link">abonnement nemen</a></li>
+              <li class="menu__item"><a href="index.php" class="menu__link menu__link-selected">webshop</a></li>
+            </div>
+            <div class="menu__items menu__items-second">
+              <li class="menu__item"><a href="" class="menu__link menu__link-nuinhumo">nu in humo</a></li>
+              <li class="menu__item"><a href="" class="menu__link">login</a></li>
+              <li class="menu__item"><a href="" class="menu__link">registreer</a></li>
+            </div>
+          </ul>
+        </div>
       </nav>
       <nav class="menu-two" id="menu-two">
         <ul class="menu-two__items">
@@ -44,25 +50,30 @@
           <li class="menu-two__item-cart">
             <p class="item-cart"><?php echo $numItems;?></p>
             <a href="index.php?page=cart" class="menu-two__link">
-              <img src="assets/img/cart.svg" alt="Winkelwagen" width="27px" height="21px">
+              <img class="item-cart__image" src="assets/img/cart.svg" alt="Winkelwagen" width="27px" height="21px">
             </a>
           </li>
         </ul>
       </nav>
     </header>
+
+
     <main id="main">
+    <?php } ?>
     <?php echo $content;?>
+    <?php if($_GET['page'] != 'longread'){ ?>
     </main>
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <img src="assets/img/dpgmedia.svg" alt="Dpg Media logo" width="44px" height="26px">
+    <div class="footer__wrapper">
+      <footer class="footer">
+        <img class="footer__dpgmedia" src="assets/img/dpgmedia.svg" alt="Dpg Media logo" width="44px" height="26px">
         <p class="footer__text">&copy; 2020 DPG Media</p>
         <div class="footer__socials">
           <a href="" class="social"><img src="assets/img/twitter.svg" alt="Humo Twitter" class="social-image" width="16px" height="14px"></a>
           <a href="" class="social"><img src="assets/img/facebook.svg" alt="Humo Facebook" class="social-image" width="8px" height="16px"></a>
           <a href="" class="social"><img src="assets/img/instagram.svg" alt="Humo Instagram" class="social-image" width="16px" height="16px"></a>
-        </div>
-    </footer>
+      </footer>
+    </div>
+    <?php } ?>
     </div>
     <?php echo $js; ?>
   </body>

@@ -2,7 +2,7 @@
   <h2 class="hidden">Process</h2>
   <ul class="steps">
     <li class="step"><a class="step__link step__link-selected" href="index.php?page=cart">winkelwagen</a></li>
-    <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10px" height="11px">
     <li class="step"><a class="step__link" href="index.php?page=<?php
       if(!empty($_SESSION['cart'])) {
         echo 'information';
@@ -10,9 +10,9 @@
         echo 'cart';
       } ?>
       ">jouw gegevens</a></li>
-    <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10px" height="11px">
     <li class="step"><a class="step__link" href="index.php?page=cart">betaalwijze</a></li>
-    <img src="assets/img/next.svg" alt="Next" width="10px" height="11px">
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10px" height="11px">
     <li class="step"><a class="step__link" href="index.php?page=cart">bevestiging</a></li>
   </ul>
 </section>
@@ -41,7 +41,7 @@
           <ul class="item">
             <li class='product-image'>
               <a href="index.php?page=detail&amp;id=<?php echo $item['product']['id'];?>">
-                <img src="<?php echo 'assets/img/' . $item['product']['type'] . '/' . $item['product']['type'] . $item['product']['id'] . '.jpg'; ?>"  alt="<?php echo $item['product']['title'];?>" width="50" height="60"/>
+                <img class="item__image" src="<?php echo 'assets/img/' . $item['product']['type'] . '/' . $item['product']['type'] . $item['product']['id'] . '.jpg'; ?>"  alt="<?php echo $item['product']['title'];?>" width="50" height="60"/>
               </a>
             </li>
             <li class='product-description'>
@@ -50,7 +50,7 @@
               <p class='product-description__price'><?php echo money_format('€ %!n', $item['product']['price']); ?></p>
             </li>
             <li class='product-quantity'><input class="text product-quantity__quantity" type="number" name="quantity[<?php echo $item['product']['id'];?>]" value="<?php echo $item['quantity'];?>" class="replace" /> </li>
-            <li class='remove-item'><button type="submit" class="remove-from-cart" name="remove" value="<?php echo $item['product']['id'];?>"><img src="assets/img/remove.svg" alt="Remove" width="14px" height="14px"></button></li>
+            <li class='remove-item'><button type="submit" class="remove-from-cart" name="remove" value="<?php echo $item['product']['id'];?>"><img class="remove-from-cart__image" src="assets/img/remove.svg" alt="Remove" width="14px" height="14px"></button></li>
             <li class='product-total'><?php echo money_format('€ %!n', $itemTotal); ?></li>
           </ul>
           <?php

@@ -1,4 +1,5 @@
 require('./style.css');
+require('./js/validate.js');
 
 {
   window.onscroll = function () { logoScale(), headerScroll(); };
@@ -19,6 +20,11 @@ require('./style.css');
       main.classList.remove('main-fixed');
       filter.classList.remove('filter-fixed', 'sticky');
     }
+
+    // filter responsive
+    if (screen.width < 581) {
+      filter.classList.remove('filter-fixed', 'sticky');
+    }
   }
 
 
@@ -35,5 +41,7 @@ require('./style.css');
 
   // filter
 
+
+  // mouse animation
 
 }

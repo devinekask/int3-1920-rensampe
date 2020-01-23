@@ -27,7 +27,7 @@
   <form class="search" action="index.php" method="GET">
     <input class="search__field" type="search" name="term" value="<?php if(!empty($_GET['term'])) {echo $_GET['term'];} ?>">
     <button class="search__submit" type="submit">
-      <img class="searc__submit-image" src="assets/img/search.svg" alt="Search button" width="17px" height="17px">
+      <img class="search__submit-image" src="assets/img/search.svg" alt="Search button" width="17px" height="17px">
     </button>
   </form>
   <form class="filter" id="filter" method="GET" action="index.php">
@@ -111,13 +111,13 @@
     ">Andere
       <input class="form-submit" type="radio" name="filter" value="andere">
     </label>
-    <input type="submit" value="filter" class="button-small button-filter form-submit">
+    <input type="submit" value="filter" class="button-small button-filter">
   </form>
   <ul class="products">
     <?php foreach($products as $product): ?>
       <li class="product">
         <a class="info" href="index.php?page=detail&amp;id=<?php echo $product['id'];?>">
-          <img src="<?php echo 'assets/img/' . $product['type'] . '/' . $product['type'] . $product['id'] . '.jpg'; ?>" alt="<?php echo $product['title'];?>" width="250" height="300">
+          <img class="image" src="<?php echo 'assets/img/' . $product['type'] . '/' . $product['type'] . $product['id'] . '.jpg'; ?>" alt="<?php echo $product['title'];?>" width="250" height="300">
           <div class="info__wrapper">
             <h3 class="subtitle"><?php echo mb_strimwidth($product['title'], 0, 24, "...");?></h3>
             <p class="price"><?php echo money_format('€ %!n', $product['price']); ?></p>

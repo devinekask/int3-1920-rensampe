@@ -68,3 +68,8 @@
 .information__button {
   width: 31rem;
 }
+
+.information__item-name {
+  display: flex;
+  flex-direction: row;
+}

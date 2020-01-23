@@ -56,4 +56,8 @@ class WebshopsController extends Controller {
     $this->set('title', "Detail");
   }
 
+  public function longread() {
+    $this->set('title', "Dromen androïden over elektrische schapen?");
+  }
+
 }
