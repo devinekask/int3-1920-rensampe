@@ -23,6 +23,7 @@
 .boek__info-subtitle {
   font-size: 2.4rem;
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .boek__info-description {
