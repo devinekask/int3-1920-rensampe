@@ -117,9 +117,9 @@
     <?php foreach($products as $product): ?>
       <li class="product">
         <a class="info" href="index.php?page=detail&amp;id=<?php echo $product['id'];?>">
-          <img class="image" src="<?php echo 'assets/img/' . $product['type'] . '/' . $product['type'] . $product['id'] . '.jpg'; ?>" alt="<?php echo $product['title'];?>" width="250" height="300">
+          <img class="image" src="<?php echo '/assets/img/' . $product['type'] . '/' . $product['type'] . $product['id'] . '.jpg'; ?>" alt="<?php echo $product['title'];?>" width="250" height="300">
           <div class="info__wrapper">
-            <h3 class="subtitle"><?php //echo mb_strimwidth($product['title'], 0, 24, "...");?></h3>
+            <h3 class="subtitle"><?php echo mb_strimwidth($product['title'], 0, 24, "...");?></h3>
             <p class="price"><?php echo money_format('€ %!n', $product['price']); ?></p>
             <p class="type"><?php echo $product['type'];?> - <?php echo $product['subtitle'];?></p>
           </div>
