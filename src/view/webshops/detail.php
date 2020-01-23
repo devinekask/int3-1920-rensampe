@@ -9,6 +9,22 @@
       <p class="boek__info-description__part"><?php echo $product['desc_2'];?></p>
       <p class="boek__info-description__part"><?php echo $product['desc_3'];?></p>
     </div>
+    <?php
+      if(!empty($product['color_1'])) {
+        echo
+        '
+        <div class="colors">
+          <input type="radio" class="color color1"></input>
+          <input type="radio" class="color color2"></input>
+          <input type="radio" class="color color3"></input>';
+
+          if(!empty($product['color_4'])) {
+            echo '<input type="radio" class="color color4"></input>';
+          }
+
+        '</div>' ;}
+    ?>
+
     <div class="boek__info-buttons">
       <form method="post" action="index.php?page=cart">
         <input name="product_id" type="hidden" value="<?php echo $product['id'];?>">
@@ -19,7 +35,7 @@
           echo '<a class="button button-link" href="' . $product['other_link'] . '">' . (($product['type'] === 'boek') ? 'e-book' : 'boek') . '</a>';
         }
       ?>
-      </div>
+    </div>
   </div>
 </section>
 

@@ -2,7 +2,7 @@
   <h2 class="hidden">Process</h2>
   <ul class="steps">
     <li class="step"><a class="step__link step__link-selected" href="index.php?page=cart">winkelwagen</a></li>
-    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
     <li class="step"><a class="step__link" href="index.php?page=<?php
       if(!empty($_SESSION['cart'])) {
         echo 'information';
@@ -10,9 +10,9 @@
         echo 'cart';
       } ?>
       ">jouw gegevens</a></li>
-    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
     <li class="step"><a class="step__link" href="index.php?page=cart">betaalwijze</a></li>
-    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
+    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
     <li class="step"><a class="step__link" href="index.php?page=cart">bevestiging</a></li>
   </ul>
 </section>
@@ -21,7 +21,7 @@
   <section class="cart">
     <div class="cart__wrapper"></div>
     <h2 class="cart__title">Winkelwagen</h2>
-    <form action="index.php?page=cart" method="post" id="cartform">
+    <form name="korting" action="index.php?page=cart" method="post" id="cartform">
           <?php
           if(empty($_SESSION['cart'])) {
             echo '
@@ -65,13 +65,23 @@
   <section class="code">
     <h2 class="cart__title">Kortingscode</h2>
     <?php
-
       $total = $subtotal - $discount;
+
+      //if(strlen($item['product']['type']) == 4 && $item['product']['id'] == 1 | $item['product']['id'] == 2 | $item['product']['id'] == 3 | $item['product']['id'] == 4 | $item['product']['id'] == 5 | $item['product']['id'] == 6 | $item['product']['id'] == 7 | $item['product']['id'] == 8 | $item['product']['id'] == 9 | $item['product']['id'] == 10):
+      //  if(!empty($item['product']['korting'])) {
+      //    echo money_format('€ %!n', $item['product']['price']);
+      //  } else {
+      //    echo money_format('€ %!n', $item['product']['price'] * $item['quantity']);
+      //  }
+      //  endif;
     ?>
-    <form method="post" action="index.php?page=cart" id="coupon">
-      <input class="code__input" type="text" name="code">
-      <button class="button code__button" type="submit" name="coupon">toevoegen</button>
+    <form method="post" action="index.php?page=cart" id="cartform">
+      <input class="code__input" type="text" name="korting[<?php echo $item['product']['id']; ?>]" id="<?php echo $item['product']['id']; ?>">
+      <button class="button code__button" type="submit" name="action" action="index.php?page=cart" value="addKorting" id="addKorting<?php echo $item['product']['id']; ?>">toevoegen</button>
     </form>
+
+
+
   </section>
 
   <section class="cart-total">

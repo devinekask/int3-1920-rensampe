@@ -55,3 +55,29 @@
     border-bottom: .2rem solid var(--primary-red);
   }
 }
+
+.colors {
+  margin-bottom: 5rem;
+}
+
+.color {
+  height: 5rem;
+  width: 5rem;
+  appearance: none;
+}
+
+.color1 {
+  background-color: #2a96d6;
+}
+
+.color2 {
+  background-color: var(--primary-red);
+}
+
+.color3 {
+  background-color: #50ef64;
+}
+
+.color4 {
+  background-color: black;
+}

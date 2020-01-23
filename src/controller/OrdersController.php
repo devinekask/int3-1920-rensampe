@@ -24,6 +24,11 @@ class OrdersController extends Controller {
       if ($_POST['action'] == 'update') {
         $this->_handleUpdate();
       }
+
+      if ($_POST['action'] == 'addKorting') {
+        $this->_handleKorting();
+      }
+
       header('Location: index.php?page=cart');
       exit();
     }
@@ -31,11 +36,6 @@ class OrdersController extends Controller {
     if (!empty($_POST['remove'])) {
       $this->_handleRemove();
       header('Location: index.php?page=cart');
-      exit();
-    }
-
-    if(!empty($_POST['code'])) {
-      header('Location: index.php?page=cart&code=' . $_POST['code']);
       exit();
     }
 
@@ -59,16 +59,20 @@ class OrdersController extends Controller {
       }
       $_SESSION['cart'][$_POST['product_id']] = array(
         'product' => $product,
-        'quantity' => 0
+        'quantity' => 0,
+        'type' => $_POST['type'],
+        'korting' => $_POST['korting']
       );
     }
     $_SESSION['cart'][$_POST['product_id']]['quantity']++;
   }
+
   private function _handleRemove() {
     if (isset($_SESSION['cart'][$_POST['remove']])) {
       unset($_SESSION['cart'][$_POST['remove']]);
     }
   }
+
   private function _handleUpdate() {
     foreach ($_POST['quantity'] as $productId => $quantity) {
       if (!empty($_SESSION['cart'][$productId])) {
@@ -77,6 +81,7 @@ class OrdersController extends Controller {
     }
     $this->_removeWhereQuantityIsZero();
   }
+
   private function _removeWhereQuantityIsZero() {
     foreach($_SESSION['cart'] as $productId => $info) {
       if ($info['quantity'] <= 0) {
@@ -100,7 +105,6 @@ class OrdersController extends Controller {
       exit;
     }
 
-
     $this->set('title', "Jouw gegevens");
 
   }
@@ -117,6 +121,19 @@ class OrdersController extends Controller {
 
   public function confirmation() {
     $this->set('title', "Bevestiging");
+  }
+
+  private function _handleKorting() {
+    if(!empty($_SESSION['cart'])) {
+      foreach ($_POST['korting'] as $productId => $korting) {
+        if(!empty($_SESSION['cart'][$productId])) {
+          $_SESSION['cart'][$productId]['korting'] = $korting;
+          if($korting == 'HUMO'){
+            $_SESSION['cart'][$productId]['product']['price'] = 4.99;
+          }
+        }
+      }
+    }
   }
 }
 
