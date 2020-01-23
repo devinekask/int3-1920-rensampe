@@ -38,9 +38,11 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">home</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">actua</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">humor</a></li>
-            <a class="logo-link" href="">
-              <img class="logo-image" id="logo-svg" src="/assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
-            </a>
+            <li>
+              <a class="logo-link" href="https://www.humo.be/">
+                <img class="logo-image" id="logo-svg" src="/assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
+              </a>
+            </li>
             <li class="menu-two__item"><a href="" class="menu-two__link">tv/film</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">muziek</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">boeken</a></li>
