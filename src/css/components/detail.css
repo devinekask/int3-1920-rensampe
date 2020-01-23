@@ -45,3 +45,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+.boek__info-description__part-longread {
+  border-bottom: .1rem solid var(--primary-red);
+  line-height: 2.3;
+  transition: all .2s;
+
+  &:hover {
+    border-bottom: .2rem solid var(--primary-red);
+  }
+}

@@ -27,7 +27,7 @@
   <form class="search" action="index.php" method="GET">
     <input class="search__field" type="search" name="term" value="<?php if(!empty($_GET['term'])) {echo $_GET['term'];} ?>">
     <button class="search__submit" type="submit">
-      <img class="search__submit-image" src="assets/img/search.svg" alt="Search button" width="17px" height="17px">
+      <img class="search__submit-image" src="assets/img/search.svg" alt="Search button" width="17" height="17">
     </button>
   </form>
   <form class="filter" id="filter" method="GET" action="index.php">
