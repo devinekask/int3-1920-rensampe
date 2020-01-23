@@ -49,7 +49,7 @@
     <form class="information" action="index.php?page=payment" method="post" id="cartform">
       <span class="error"></span>
       <div class="information__item">
-        <label for="fname error" class="information__item-name">Voornaam<span class="error"></span></label>
+        <label for="fname" class="information__item-name">Voornaam<span class="error"></span></label>
         <input id="fname" class="input code__input information__item-input" type="text" name="fname" required>
       </div>
       <div class="information__item">

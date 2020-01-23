@@ -63,62 +63,48 @@
 
   <section class="cart-information cart-payment">
       <h2 class="cart__title">Betaalwijze</h2>
-      <form class="payment information" action="" method="post" id="handelCheckout">
+      <form class="payment information" method="post" id="handelCheckout">
         <span class="payment-bigerror error"></span>
         <div class="payment__item">
           <label class="payment__item-wrapper">
             <input class="input form-submit payment__item-radio" name="payment-radio" type="radio" required>
-            <p class="payment__item-title">PayPal<span class="payment-error error"></span></p>
-            <p class="payment__item-text">Je wordt doorgestuurd naar PayPal om je betaling te voltooien.</p>
+            <span class="payment__item-title">PayPal<span class="payment-error error"></span></span>
+            <span class="payment__item-text">Je wordt doorgestuurd naar PayPal om je betaling te voltooien.</span>
           </label>
         </div>
         <div class="payment__item">
           <label class="payment__item-wrapper">
             <input class="input form-submit payment__item-radio" name="payment-radio" type="radio">
-            <p class="payment__item-title">Kredietkaart<span class="payment-error error"></span></p>
-            <div class="payment__item-wrapper__name">
-              <label class="input-name">Naam op kaart
-                <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
-              </label>
-            </div>
-            <div class="payment__item-wrapper__number">
-              <label class="input-name">Kredietkaartnummer
-                <input class="code__input code__input-payment" type="text">
-              </label>
-            </div>
+            <span class="payment__item-title">Kredietkaart<span class="payment-error error"></span></span>
+            <label class="input-name payment__item-wrapper__name">Naam op kaart
+              <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
+            </label>
+            <label class="input-name payment__item-wrapper__number">Kredietkaartnummer
+              <input class="code__input code__input-payment" type="text">
+            </label>
             <div class="payment__item-wrapper__date payment__item-wrapper__date-cvc">
-              <div>
-                <label class="input-name">Geldig tot
-                  <input class="code__input code__input-payment-tight" type="text" value="02/20">
-                </label>
-              </div>
-              <div class="cvc">
-                <label class="input-name">CVC / CVV
-                  <input class="code__input code__input-payment-tight code__input-payment-cvc" type="text">
-                </label>
-              </div>
+              <label class="input-name payment__item-wrapper__date">Geldig tot
+                <input class="code__input code__input-payment-tight" type="text" value="02/20">
+              </label>
+              <label class="input-name payment__item-wrapper__date cvc">CVC / CVV
+                <input class="code__input code__input-payment-tight code__input-payment-cvc" type="text">
+              </label>
             </div>
           </label>
         </div>
         <div class="payment__item">
           <label class="payment__item-wrapper">
             <input class="input form-submit payment__item-radio" name="payment-radio" type="radio" required>
-            <p class="payment__item-title">Debetkaart<span class="payment-error error"></span></p>
-            <div class="payment__item-wrapper__name">
-              <label class="input-name">Naam op kaart
-                <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
-              </label>
-            </div>
-            <div class="payment__item-wrapper__number">
-              <label class="input-name">Debetkaartnummer
-                <input class="code__input code__input-payment" type="text">
-              </label>
-            </div>
-            <div class="payment__item-wrapper__date">
-              <label class="input-name">Geldig tot
-                <input class="code__input code__input-payment-tight" type="text" value="02/20">
-              </label>
-            </div>
+            <span class="payment__item-title">Debetkaart<span class="payment-error error"></span></span>
+            <label class="input-name payment__item-wrapper__name">Naam op kaart
+              <input class="code__input code__input-payment" type="text" value="<?php echo $_POST['fname'] . ' ' . $_POST['lname']; ?>">
+            </label>
+            <label class="input-name payment__item-wrapper__number">Debetkaartnummer
+              <input class="code__input code__input-payment" type="text">
+            </label>
+            <label class="input-name payment__item-wrapper__date">Geldig tot
+              <input class="code__input code__input-payment-tight" type="text" value="02/20">
+            </label>
           </label>
         </div>
         <button class="information__button button cart-button <?php if(empty($_SESSION['cart'])) { display:hidden; } ?>" type="submit" id="checkout" name="action" value="handleCheckout">betalen</button>
