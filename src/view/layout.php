@@ -38,21 +38,19 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">home</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">actua</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">humor</a></li>
-            <div class="logo">
-              <a class="logo-link" href="">
-                <img class="logo-image" id="logo-svg" src="/assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
-              </a>
-            </div>
+            <a class="logo-link" href="">
+              <img class="logo-image" id="logo-svg" src="/assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
+            </a>
             <li class="menu-two__item"><a href="" class="menu-two__link">tv/film</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">muziek</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">boeken</a></li>
           </ul>
-          <li class="menu-two__item-cart">
+          <div class="menu-two__item-cart">
             <p class="item-cart"><?php echo $numItems;?></p>
             <a href="index.php?page=cart" class="menu-two__link">
               <img class="item-cart__image" src="/assets/img/cart.svg" alt="Winkelwagen" width="27" height="21">
             </a>
-          </li>
+          </div>
         </div>
       </nav>
     </header>
