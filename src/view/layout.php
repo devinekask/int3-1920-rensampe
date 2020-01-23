@@ -75,6 +75,7 @@
     </div>
     <?php } ?>
     </div>
-    <?php echo $js; ?>
+    <?php //echo $js; ?>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -34,5 +34,5 @@
     } else {
       logo.classList.remove('logo-fixed');
     }
-  } ©
+  }
 }

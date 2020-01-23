@@ -103,6 +103,7 @@
 .type {
   line-height: 2rem;
   grid-column: 1 / 3;
+  text-transform: capitalize;
 }
 
 .price {
