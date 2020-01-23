@@ -2,11 +2,11 @@
   <h2 class="hidden">Process</h2>
   <ul class="steps">
     <li class="step"><a class="step__link" href="index.php?page=cart">winkelwagen</a></li>
-    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
+    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
     <li class="step"><a class="step__link step__link-selected" href="index.php?page=information">jouw gegevens</a></li>
-    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
+    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
     <li class="step"><a class="step__link" href="index.php?page=information">betaalwijze</a></li>
-    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
+    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
     <li class="step"><a class="step__link" href="index.php?page=information">bevestiging</a></li>
   </ul>
 </section>
@@ -47,35 +47,35 @@
   <section class="cart-information">
     <h2 class="cart__title">Jouw gegevens</h2>
     <form class="information" action="index.php?page=payment" method="post" id="cartform">
-      <p class="error"></p>
+      <span class="error"></span>
       <div class="information__item">
-        <label for="fname" class="information__item-name">Voornaam<p class="error"></p></label>
-        <input id="fname" class="input code__input information__item-input" type="text" name="fname" required></input>
+        <label for="fname error" class="information__item-name">Voornaam<span class="error"></span></label>
+        <input id="fname" class="input code__input information__item-input" type="text" name="fname" required>
       </div>
       <div class="information__item">
-        <label for="lname" class="information__item-name">Achternaam<p class="error"></p></label>
-        <input id="lname" class="input code__input information__item-input" type="text" name="lname" required></input>
+        <label for="lname" class="information__item-name">Achternaam<span class="error"></span></label>
+        <input id="lname" class="input code__input information__item-input" type="text" name="lname" required>
       </div>
       <div class="information__item">
-        <label for="email" class="information__item-name">E-mailadres<p class="error"></p></label>
-        <input id="email" class="input code__input information__item-input" type="email" name="email" required></input>
+        <label for="email" class="information__item-name">E-mailadres<span class="error"></span></label>
+        <input id="email" class="input code__input information__item-input" type="email" name="email" required>
       </div>
       <div class="information__address">
         <div class="information__address__item information__address__item-street">
-          <label for="street" class="information__item-name">Straat<p class="error"></p></label>
-          <input id="street" class="input code__input information__item-input information__item-input-wide" type="text" name="street" required></input>
+          <label for="street" class="information__item-name">Straat<span class="error"></span></label>
+          <input id="street" class="input code__input information__item-input information__item-input-wide" type="text" name="street" required>
         </div>
         <div class="information__address__item information__address__item-number">
-          <label for="number" class="information__item-name">Huisnr.<p class="error"></p></label>
-          <input id="number" class="input code__input information__item-input information__item-input-tight" type="number" name="number" min="0" required></input>
+          <label for="number" class="information__item-name">Huisnr.<span class="error"></span></label>
+          <input id="number" class="input code__input information__item-input information__item-input-tight" type="number" name="number" min="0" required>
         </div>
         <div class="information__address__item information__address__item-bus">
           <label for="bus" class="information__item-name">Bus</label>
-          <input id="bus" class="input code__input information__item-input information__item-input-tight" type="text" name="bus"></input>
+          <input id="bus" class="input code__input information__item-input information__item-input-tight" type="text" name="bus">
         </div>
         <div class="information__address__item information__address__item-place">
-          <label for="place" class="information__item-name">Woonplaats<p class="error"></p></label>
-          <input id="place" class="input code__input information__item-input information__item-input-wide" type="text" name="place" required></input>
+          <label for="place" class="information__item-name">Woonplaats<span class="error"></span></label>
+          <input id="place" class="input code__input information__item-input information__item-input-wide" type="text" name="place" required>
         </div>
       </div>
       <button class="information__button button cart-button <?php if(empty($_SESSION['cart'])) { display:hidden; } ?>" type="submit" id="checkout" name="action" value="checkout">Betaalwijze</button>

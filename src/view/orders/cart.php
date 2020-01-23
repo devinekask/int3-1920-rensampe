@@ -2,7 +2,7 @@
   <h2 class="hidden">Process</h2>
   <ul class="steps">
     <li class="step"><a class="step__link step__link-selected" href="index.php?page=cart">winkelwagen</a></li>
-    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
+    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
     <li class="step"><a class="step__link" href="index.php?page=<?php
       if(!empty($_SESSION['cart'])) {
         echo 'information';
@@ -10,9 +10,9 @@
         echo 'cart';
       } ?>
       ">jouw gegevens</a></li>
-    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
+    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
     <li class="step"><a class="step__link" href="index.php?page=cart">betaalwijze</a></li>
-    <img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11">
+    <li><img class="step__image" src="assets/img/next.svg" alt="Next" width="10" height="11"></li>
     <li class="step"><a class="step__link" href="index.php?page=cart">bevestiging</a></li>
   </ul>
 </section>
@@ -68,7 +68,7 @@
 
       $total = $subtotal - $discount;
     ?>
-    <form method="post" action="index.php?page=cart" id="cartform">
+    <form method="post" action="index.php?page=cart" id="coupon">
       <input class="code__input" type="text" name="code">
       <button class="button code__button" type="submit" name="coupon">toevoegen</button>
     </form>
