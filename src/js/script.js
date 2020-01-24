@@ -37,4 +37,5 @@ require('../index.js');
       logo.classList.remove('logo-fixed');
     }
   }
+
 }

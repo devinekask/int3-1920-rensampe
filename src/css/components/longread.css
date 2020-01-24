@@ -1,9 +1,24 @@
+@font-face {
+  font-family: Nimbus;
+  src: url(/assets/fonts/nimbus/black/nimbus-black.woff2) format('woff2'), url(/src/assets/fonts/nimbus/black/nimbus-black.woff) format('woff');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Modernofb;
+  src: url(/assets/fonts/modernofb/regular/modernofb-regular.woff2) format('woff2'), url(/src/assets/fonts/modernofb/regular/modernofb-regular.woff) format('woff');
+  font-weight: 400;
+}
+
 .longread__header {
+  font-family: Nimbus, Arial, Helvetica, sans-serif;
+  padding-top: 5rem;
   height: 100vh;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 15rem auto;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 5rem auto;
   background-color: black;
+  width: 100%;
 }
 
 .longread__header__image-wrapper {
@@ -18,10 +33,6 @@
 .longread__header__image {
   margin-top: 0;
   transition: all .5s ease-out;
-
-  /*&:hover {
-    height: 100rem;
-  }*/
 }
 
 .longread__header__image-tekst1 {
@@ -170,7 +181,7 @@
 }
 
 .longread__header__image path, .longread__header__image rect, .longread__header__image polygon {
-  fill: #FFBF00;
+  fill: white;
   animation: fontchange 10s;
   -webkit-animation: fontchange 10s;
   -webkit-animation-timing-function: ease;
@@ -179,14 +190,163 @@
 
 @keyframes fontchange {
   0%  {fill: black;}
-  35% {fill: white;}
-  100% {fill: #FFBF00;}
+  100% {fill: white;}
 }
 
 @-webkit-keyframes fontchange {
   0%   {fill: black;}
-  35% {fill: white;}
-  100% {fill: #FFBF00;}
+  100% {fill: white;}
+}
+
+@keyframes menu {
+  0%  {opacity: 0;}
+  20%  {opacity: 5%;}
+  50%  {opacity: 15%;}
+  100% {opacity: 100%;}
+}
+
+@-webkit-keyframes menu {
+  0%  {opacity: 0;}
+  20%  {opacity: 5%;}
+  50%  {opacity: 15%;}
+  100% {opacity: 100%;}
 }
 
 /* stylelint-enable */
+
+.longread__logo-link {
+  animation: menu 10s ease;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.longread__menu {
+  animation: menu 10s ease;
+  grid-column: 3;
+}
+
+.longread__menu__link {
+  background: transparent;
+  color: white;
+  font-size: 1.6rem;
+
+  &:hover {
+    /* stylelint-disable */
+    background: linear-gradient(to right, #be93c5, #7bc6cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* stylelint-enable */
+
+  }
+}
+
+.longread__menu__item-boek {
+  margin-top: .8rem;
+  margin-left: 1rem;
+}
+
+.longread__menu__item-ebook {
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
+.longread {
+  color: #222;
+  width: 100%;
+  font-family: Nimbus, Arial, Helvetica, sans-serif;
+}
+
+.longread__writer {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 80rem;
+}
+
+.longread__writer__range {
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  -webkit-transition: .2s;
+  /* stylelint-enable */
+  background-color: transparent;
+  grid-column: 3;
+  transform: rotate(90deg);
+  width: 60rem;
+  margin-top: -12rem;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+input[type=range]::-webkit-slider-thumb {
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  /* stylelint-enable */
+  opacity: 1;
+  position: relative;
+  appearance: none;
+  width: 30.8rem;
+  height: 47.9rem;
+  cursor: pointer;
+  border: none;
+  background: url(/assets/img/philip.png) no-repeat;
+  margin-top: 1rem;
+  z-index: 5;
+  transform: rotate(-90deg);
+}
+
+.longread__writer__info {
+  grid-column: 2 / 3;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.longread__writer__info-quote {
+  font-family: Modernofb, Arial, Helvetica, sans-serif;
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  text-align: center;
+}
+
+.longread__writer__info-item {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  margin-bottom: 4.5rem;
+}
+
+.longread__writer__info-first {
+  margin-top: 7.5rem;
+  width: 26.5rem;
+  height: 10.3rem;
+  margin-bottom: 2rem;
+}
+
+.longread__writer__info-first-image {
+  margin-bottom: 2rem;
+}
+
+.longread__writer__info-third {
+  margin-top: 4rem;
+}
+
+.longread__test {
+  background-color: black;
+  height: 30rem;
+}
+
+.longread__writer__load {
+  font-size: 2.4rem;
+  justify-self: center;
+  margin-top: -5rem;
+  height: 1rem;
+  grid-column: 3;
+}
+
+#demo {
+
+}

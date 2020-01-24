@@ -1,6 +1,15 @@
 <header class="longread__header">
+  <h1 class="hidden">Dromen androïden over elektrische schapen?</h1>
+  <a class="longread__logo-link" href="https://www.humo.be/"><img src="./assets/img/logolongread.png" alt="Humo logo" height="40" width="109"></a>
+  <nav class="longread__menu">
+    <ul class="longread__menu__items">
+      <li class="longread__menu__item"><a class="longread__menu__link" href="index.php">_webshop</a></li>
+      <li class="longread__menu__item longread__menu__item-boek"><a class="longread__menu__link" href="index.php?page=detail&id=1">_boek</a></li>
+      <li class="longread__menu__item longread__menu__item-ebook"><a class="longread__menu__link" href="index.php?page=detail&id=11">_e-book</a></li>
+    </ul>
+  </nav>
   <div class="longread__header__image-wrapper">
-    <svg fill="#ffffff" id="bounce1" class="longread__header__image longread__header__image-tekst1" width="136px" height="178px" viewBox="0 0 136 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg fill="#ffffff" id="bounce1" class="longread__header__image longread__header__image-tekst1" width="136" height="178" viewBox="0 0 136 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
       <title>tekst1</title>
       <desc>Created with Sketch.</desc>
@@ -144,3 +153,25 @@
     </svg>
   </div>
 </header>
+
+<main class="longread">
+  <section class="longread__writer">
+    <h2 class="hidden">Philip K. Dick</h2>
+    <ul class="longread__writer__info">
+      <li class="longread__writer__info-first"></li>
+      <li class="longread__writer__info-second"></li>
+      <li class="longread__writer__info-third"></li>
+      <li class="longread__writer__info-fourth"></li>
+      <li class="longread__writer__info-fifth"></li>
+      <li class="longread__writer__info-sixth"></li>
+      <li class="longread__writer__info-seventh"></li>
+      <li></li>
+    </ul>
+    <input class="longread__writer__range" type="range" min="1" max="100" value="1" id="slider">
+    <p class="longread__writer__load"><span id="demo">0</span>%</p>
+  </section>
+
+  <section class="longread__test">
+    fdqdfqsq
+  </section>
+</main>

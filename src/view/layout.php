@@ -76,5 +76,6 @@
     </div>
     <?php } ?>
     <?php echo $js; ?>
+    <script src="/js/longread.js"></script>
   </body>
 </html>
