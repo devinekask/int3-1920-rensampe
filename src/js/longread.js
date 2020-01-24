@@ -1,6 +1,6 @@
 {
+  // slider
   const slider = document.getElementById('slider');
-  console.log(slider);
   slider.oninput = function () {
     giveValue();
     showInfo();
@@ -23,17 +23,17 @@
 
 
     const hoeveel = slider.value;
-    if (hoeveel > 80 && hoeveel < 101) {
+    if (hoeveel > 85 && hoeveel < 101) {
       $infoSeventh.innerHTML = `<p class="longread__writer__info-item">† 1982</p>`;
-    } else if (hoeveel > 65 && hoeveel < 101) {
+    } else if (hoeveel > 70 && hoeveel < 101) {
       $infoSixth.innerHTML = `<p class="longread__writer__info-item">8 verfilmde boeken</p>`;
-    } else if (hoeveel > 50 && hoeveel < 101) {
+    } else if (hoeveel > 55 && hoeveel < 101) {
       $infoFifth.innerHTML = `<p class="longread__writer__info-item">121 korte verhalen</p>`;
-    } else if (hoeveel > 40 && hoeveel < 101) {
+    } else if (hoeveel > 45 && hoeveel < 101) {
       $infoFourth.innerHTML = `<p class="longread__writer__info-item">science fiction</p>`;
-    } else if (hoeveel > 30 && hoeveel < 101) {
+    } else if (hoeveel > 35 && hoeveel < 101) {
       $infoThird.innerHTML = `<p class="longread__writer__info-item">californïe</p>`;
-    } else if (hoeveel > 15 && hoeveel < 101) {
+    } else if (hoeveel > 25 && hoeveel < 101) {
       $infoSecond.innerHTML = `
         <p class="longread__writer__info-quote">Er komt een tijd waar het niet meer</p>
         <p class="longread__writer__info-quote">'Ze bespioneren me via mijn telefoon' is.</p>
@@ -44,6 +44,27 @@
     }
   };
 
+  // slides
+  let slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    let i;
+    const x = document.getElementsByClassName('mySlides');
+    if (n > x.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = x.length; }
+    for (
+      i = 0;
+      i < x.length;
+      i++) {
+      x[i].style.display = 'none';
+    }
+    x[slideIndex - 1].style.display = 'flex';
+  }
 
 
 }

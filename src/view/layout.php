@@ -61,7 +61,7 @@
     <main id="main">
     <?php } ?>
     <?php echo $content;?>
-    <?php if($_GET['page'] != 'longread'){ ?>
+    <?php if($_GET['page'] != ''){ ?>
     </main>
     <div class="footer__wrapper">
       <footer class="footer">

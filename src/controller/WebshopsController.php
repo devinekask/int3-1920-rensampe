@@ -31,9 +31,6 @@ class WebshopsController extends Controller {
       $products = array();
     }
 
-
-
-
     $this->set('products', $products);
     $this->set('title', "Webshop");
   }

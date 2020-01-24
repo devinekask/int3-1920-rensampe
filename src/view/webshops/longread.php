@@ -152,6 +152,7 @@
       </g>
     </svg>
   </div>
+  <p class="longread__writer-sentence">Sleep Philip naar beneden!</p>
 </header>
 
 <main class="longread">
@@ -159,6 +160,7 @@
     <h2 class="hidden">Philip K. Dick</h2>
     <ul class="longread__writer__info">
       <li class="longread__writer__info-first"></li>
+      <li><img class="longread__writer__info-quote-image" src="/assets/img/quote.svg" alt="quote" width="79" height="71"></li>
       <li class="longread__writer__info-second"></li>
       <li class="longread__writer__info-third"></li>
       <li class="longread__writer__info-fourth"></li>
@@ -171,7 +173,127 @@
     <p class="longread__writer__load"><span id="demo">0</span>%</p>
   </section>
 
-  <section class="longread__test">
-    fdqdfqsq
+  <section class="longread__hoofdstuk">
+    <h2 class="hidden">Hoofdstuk 10</h2>
+    <img class="longread__hoofdstuk__title" src="/assets/img/hoofdstuk.svg" alt="Hoofdstuk 10" width="386" height="104" >
+    <article class="part part-one">
+      <h3 class="hidden">Stuk 1</h3>
+      <img class="part-one__image" src="/assets/img/gebouwen.png" alt="Gerechtsgebouw" width="702" height="563">
+      <p class="part-one__text">Het gerechtsgebouw aan Mission Street, op het dak waarvan de hovercar neerdaalde, was voorzien van een aantal barok uitgevoerde spitsen. Het geheel maakte een gecompliceerde, moderne indruk, en Rick vond het een fraai en bijzonder aantrekkelijk ontwerp - op één aspect na: hij had het nooit eerder gezien.</p>
+    </article>
+    <article class="part part-two">
+      <h3 class="hidden">Stuk 2</h3>
+      <div>
+        <p class="part-two__text">Een paar minuten na de landing van de hovercar werd hij in staat van beschuldiging gesteld.</p>
+        <p class="part-two__text">‘304,’ zei agent Crams tegen de sergeant achter het hoge bureau. ‘En 612 punt 4, en laten we eens kijken… zich uitgeven voor politieman.’</p>
+        <p class="part-two__text">‘406 punt 7,’ zei de sergeant van dienst, terwijl hij enigszins verveeld het formulier invulde. Een routineklus, leek hij met zijn houding te willen uitdragen, van geen belang. </p>
+      </div>
+      <img class="part-two__image" src="/assets/img/nummers.svg" alt="Nummers" width="677" height="537">
+    </article>
+    <article class="part-two__rectangle"></article>
+    <article class="part part-three">
+      <h3 class="hidden">Stuk 3</h3>
+      <img class="part-three__image" src="/assets/img/brein.png" alt="Hersenen" width="421" height="538">
+      <div class="part-three__text-wrapper">
+        <p class="part-three__text">‘Deze kant op,’ zei agent Crams tegen Rick, en hij bracht hem naar een wit tafeltje, met daarachter een technicus met een apparaat dat hem bekend voorkwam. ‘Je hersenpatroon,’ zei Crams. ‘Ten behoeve van de identificatie.’</p>
+        <p class="part-three__text">‘Weet ik,’ zei Rick kortaf. Toen hij vroeger zelf nog bij de uniformdienst zat, had hij talloze verdachten naar zo’n tafeltje gebracht. Niet naar dit specifieke tafeltje, maar naar net zo een.</p>
+      </div>
+    </article>
+    <article class="part part-four">
+      <h3 class="hidden">Stuk 4</h3>
+      <div class="part-four__text-wrapper">
+        <p class="part-four__text">Nadat zijn hersenpatroon was opgemeten, werd hij naar een al even vertrouwde ruimte gebracht, waar hij werktuiglijk begon zijn waardevolle spullen uit zijn zakken te halen om ze af te geven. Ik snap er niks van dacht hij. Wie zijn deze mensen? Als dit gebouw er altijd al was, waarom wisten wij dat dan niet? En waarom weten zij niets van ons?</p>
+        <p class="part-four__text">Twee naast elkaar bestaande politieorganisaties, deze en die van ons. Die echter tot nu toe nooit met elkaar in contact kwamen - voor zover ik weet. Of misschien toch wel, dacht hij.</p>
+      </div>
+      <img class="part-four__image" src="/assets/img/boom.png" alt="Uitzicht" width="1028" height="610">
+    </article>
+
+  </section>
+
+  <section class="longread__books">
+    <h2 class="hidden">De volledige reeks</h2>
+    <img class="longread__books__title" src="/assets/img/reeks.svg" alt="De volledige reeks" width="446" height="102">
+    <article class="mySlides">
+      <img class="longread__books__image" src="/assets/img/boek/boek1.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Do androïds dream of electric sheep?</h3>
+        <p class="longread__books__info-writer">Philip K. Dick</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=1">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="/assets/img/boek/boek2.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Farenheit 451</h3>
+        <p class="longread__books__info-writer">Ray Bradbury</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=2">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek3.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">The Handsmaid’s Tale</h3>
+        <p class="longread__books__info-writer">Margaret Atwood</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=3">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek4.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Enders Game</h3>
+        <p class="longread__books__info-writer">Orson Scott Card</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=4">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek5.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">I, Robot</h3>
+        <p class="longread__books__info-writer">Isaac Asimov</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=5">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek6.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">The Road</h3>
+        <p class="longread__books__info-writer">Cormac McCarthy</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=6">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek7.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Wool</h3>
+        <p class="longread__books__info-writer">Hugh Howey</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=7">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek8.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Snow Crash</h3>
+        <p class="longread__books__info-writer">Neal Stephenson</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=8">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek9.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Ready Player One</h3>
+        <p class="longread__books__info-writer">Ernest Cline</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=9">Meer info</a>
+      </div>
+    </article>
+    <article class="mySlides">
+      <img class="longread__books__image" src="assets/img/boek/boek10.jpg" alt="boeknaam" width="469" height="563">
+      <div class="longread__books__info">
+        <h3 class="longread__books__info-title">Neuromancer</h3>
+        <p class="longread__books__info-writer">William Gibson</p>
+        <a class="longread__books__info-link" href="index.php?page=detail&id=10">Meer info</a>
+      </div>
+    </article>
+    <button class="longread__button longread__button-left" onclick="plusDivs(-1)"></button>
+    <button class="longread__button longread__button-right" onclick="plusDivs(1)"></button>
   </section>
 </main>
