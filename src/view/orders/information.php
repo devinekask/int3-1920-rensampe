@@ -31,10 +31,6 @@
         <p class="cart-total__text"><?php echo money_format('€ %!n', $subtotal); ?></p>
       </li>
       <li class="cart-total__item">
-        <p class="cart-total__text">Kortingscode</p>
-        <p class="cart-total__text">- <?php echo money_format('€ %!n', $discount); ?></p>
-      </li>
-      <li class="cart-total__item">
         <p class="cart-total__text">Levering</p>
         <p class="cart-total__text">Gratis</p>
       </li>
@@ -70,8 +66,8 @@
           <input id="number" class="input code__input information__item-input information__item-input-tight" type="number" name="number" min="0" required>
         </div>
         <div class="information__address__item information__address__item-bus">
-          <label for="bus" class="information__item-name">Bus</label>
-          <input id="bus" class="input code__input information__item-input information__item-input-tight" type="text" name="bus">
+          <label for="bus" class="information__item-name">Postcode</label>
+          <input id="bus" class="input code__input information__item-input information__item-input-tight" type="text" name="bus" min="0" required>
         </div>
         <div class="information__address__item information__address__item-place">
           <label for="place" class="information__item-name">Woonplaats<span class="error"></span></label>

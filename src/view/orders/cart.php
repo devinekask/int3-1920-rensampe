@@ -92,10 +92,6 @@
         <p class='cart-total__text'><?php echo money_format('€ %!n', $subtotal); ?></p>
       </li>
       <li class="cart-total__item">
-        <p class="cart-total__text">Kortingscode</p>
-        <p class="cart-total__text">- <?php echo money_format('€ %!n', $discount); ?></p>
-      </li>
-      <li class="cart-total__item">
         <p class="cart-total__text">Levering</p>
         <p class="cart-total__text">Gratis</p>
       </li>

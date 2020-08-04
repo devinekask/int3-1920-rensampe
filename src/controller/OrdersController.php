@@ -65,6 +65,9 @@ class OrdersController extends Controller {
       );
     }
     $_SESSION['cart'][$_POST['product_id']]['quantity']++;
+
+    header('Location: index.php?page=cart');
+    exit();
   }
 
   private function _handleRemove() {
@@ -106,7 +109,6 @@ class OrdersController extends Controller {
     }
 
     $this->set('title', "Jouw gegevens");
-
   }
 
   public function payment() {
@@ -128,12 +130,14 @@ class OrdersController extends Controller {
       foreach ($_POST['korting'] as $productId => $korting) {
         if(!empty($_SESSION['cart'][$productId])) {
           $_SESSION['cart'][$productId]['korting'] = $korting;
-          if($korting == 'HUMO'){
+          if($korting == 'HUMO' && $productId == 1){
             $_SESSION['cart'][$productId]['product']['price'] = 4.99;
           }
         }
       }
     }
   }
+
+
 }
 
