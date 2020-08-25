@@ -40,7 +40,7 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">humor</a></li>
             <li class="menu-two__logo">
               <a class="logo-link" href="https://www.humo.be/">
-                <img class="logo-image" id="logo-svg" src="/assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
+                <img class="logo-image" id="logo-svg" src="assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
               </a>
             </li>
             <li class="menu-two__item"><a href="" class="menu-two__link">tv/film</a></li>
@@ -50,7 +50,7 @@
           <div class="menu-two__item-cart">
             <p class="item-cart"><?php echo $numItems;?></p>
             <a href="index.php?page=cart" class="menu-two__link">
-              <img class="item-cart__image" src="/assets/img/cart.svg" alt="Winkelwagen" width="27" height="21">
+              <img class="item-cart__image" src="assets/img/cart.svg" alt="Winkelwagen" width="27" height="21">
             </a>
           </div>
         </div>
@@ -65,12 +65,12 @@
     </main>
     <div class="footer__wrapper">
       <footer class="footer">
-        <img class="footer__dpgmedia" src="/assets/img/dpgmedia.svg" alt="Dpg Media logo" width="44" height="26">
+        <img class="footer__dpgmedia" src="assets/img/dpgmedia.svg" alt="Dpg Media logo" width="44" height="26">
         <p class="footer__text">&copy; 2020 DPG Media</p>
         <div class="footer__socials">
-          <a href="" class="social"><img src="/assets/img/twitter.svg" alt="Humo Twitter" class="social-image" width="16" height="14"></a>
-          <a href="" class="social"><img src="/assets/img/facebook.svg" alt="Humo Facebook" class="social-image" width="8" height="16"></a>
-          <a href="" class="social"><img src="/assets/img/instagram.svg" alt="Humo Instagram" class="social-image" width="16" height="16"></a>
+          <a href="" class="social"><img src="assets/img/twitter.svg" alt="Humo Twitter" class="social-image" width="16" height="14"></a>
+          <a href="" class="social"><img src="assets/img/facebook.svg" alt="Humo Facebook" class="social-image" width="8" height="16"></a>
+          <a href="" class="social"><img src="assets/img/instagram.svg" alt="Humo Instagram" class="social-image" width="16" height="16"></a>
         </div>
       </footer>
     </div>
