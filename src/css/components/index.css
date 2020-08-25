@@ -4,7 +4,7 @@
 
 .webshop {
   display: grid;
-  grid-template-columns: 18.8rem 82.8rem;
+  grid-template-columns: .9fr 4fr;
   grid-template-rows: 3.2rem 2rem auto;
 }
 
@@ -29,7 +29,6 @@
 .search__field {
   border: .1rem solid black;
   height: 3.2rem;
-  width: 22rem;
   float: left;
   display: block;
   text-decoration: none;
@@ -88,6 +87,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3.9rem;
   margin-bottom: 10rem;
+
 }
 
 .product {

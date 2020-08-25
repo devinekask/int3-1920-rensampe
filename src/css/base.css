@@ -24,7 +24,6 @@ html {
 
 html, body {
   height: 100%;
-  margin: 0;
 }
 
 /* stylelint-disable */
@@ -189,6 +188,10 @@ a {
   &:hover {
     color: var(--primary-red);
   }
+}
+
+.menu-two__logo {
+  text-align: center;
 }
 
 .item-cart {

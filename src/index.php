@@ -35,10 +35,6 @@ $routes = array(
   'confirmation' => array(
     'controller' => 'Orders',
     'action' => 'confirmation'
-  ),
-  'longread' => array(
-    'controller' => 'Webshops',
-    'action' => 'longread'
   )
 );
 

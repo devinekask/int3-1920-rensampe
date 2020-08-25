@@ -13,7 +13,7 @@
       <nav class="menu">
         <div id="menuToggle">
         <input class="hamburger sticky" type="checkbox"/>
-        <span></span>
+        <span class="hamburger__one"></span>
         <span class="hamburger__two"></span>
         <span class="hamburger__three"></span>
           <div class="menu__wrapper">
@@ -38,7 +38,7 @@
             <li class="menu-two__item"><a href="" class="menu-two__link">home</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">actua</a></li>
             <li class="menu-two__item"><a href="" class="menu-two__link">humor</a></li>
-            <li>
+            <li class="menu-two__logo">
               <a class="logo-link" href="https://www.humo.be/">
                 <img class="logo-image" id="logo-svg" src="/assets/img/humologo.svg" alt="Logo Humo" width="210" height="70">
               </a>
